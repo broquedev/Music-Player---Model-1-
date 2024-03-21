@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Signika Negative", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#313131, #151515);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    width: 35rem;
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 3rem;
+    box-shadow: 0 1rem 5rem rgb(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #313234, #1d1d1d);
+}
+
+.player-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-btn {
+    width: 4rem;
+    height: 4rem;
+    border: .2rem solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    background-color: #2b2c2e;
+    color: #a8a9ab;                    
+    box-shadow: .5rem .5rem 2rem -.1rem rgba(0, 0, 0, .5), 
+                -.4rem -.4rem 2rem -.1rem rgba(255, 255, 255, .2);
+    cursor: pointer;            
+}
+
+.player-btn:active {
+    transform: translateY(.2rem);
+}
+
+.player-top span {
+    font-size: 1.3rem;
+    color: #a8a9ab
+}
+
+.player-body {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-song {
+    width: 30rem;
+    height: 30rem;        
+    background: rgba(255, 255, 255, 0.0);
+    border-radius: 7rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);                                
+    -webkit-backdrop-filter: blur(5px);
+} 
+
+.cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    position: relative;
+    border-radius: 7%;  
+    background: url(./imgs/img_album.png) center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+.cover span {   
+    width: auto;
+    position: absolute;    
+    padding: .8rem 3rem; 
+    font-family: "Signika Negative", cursive;    
+    background: rgba(85, 85, 85, .1); 
+    backdrop-filter: blur(2px);
+}
+
+.cover span:nth-child(1) {    
+    top: 18%;
+    font-size: 1.8rem;
+    color: #ddd;
+}
+
+.cover span:nth-child(2) {
+    top: 33%;
+    font-size: 2.8rem;
+    color: #fff;    
+}
+
+.song-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-name {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.song-artist {
+    font-size: 1.2rem;
+    color: #a8a9ab;
+}
+
+.song-info i {
+    font-size: 2rem;
+    background: linear-gradient(to right, #3baa7b, #62bc68);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.song-time {
+    width: 100%;
+    height: .5rem;
+    background-color: #0c0c0d;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    box-shadow: .2rem .2rem .2rem rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative; 
+}
+
+.song-progres {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to right, #3baa7b, #62bc68);
+    border-radius: .5rem;
+}
+
+.time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.time span {
+    font-size: 1.2rem;
+    color: #a8a9ab;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-pause {
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(to right, #3baa7b, #62bc68);
+    color: #fff;
+    box-shadow: -0.5rem 1.5rem 5rem -0.1rem rgba(0, 0, 0, .7), 
+                -0.4rem -0.4rem 3rem -0.1rem rgba(255, 255, 255, 0.4);
+}
+
+.player-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    color: #a8a9ab;
+}
+
+.player-footer i {
+    font-size: 1.4rem;
+}
+
+.player-footer span {
+    font-size: 1.2rem;
+}
+

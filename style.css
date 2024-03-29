@@ -12,12 +12,18 @@ html {
 
 .container {
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(#313131, #151515);    
+    height: 100vh;    
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+ @media screen and (width: 375px){
+    .container {
+        height: 100%;
+        padding: 4rem 0;
+    }
+} 
 
 .player {
     width: 35rem;
@@ -142,6 +148,95 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
+.song_volume {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 5px;
+    margin-bottom: 18px;
+    border-radius: 5rem;   
+}
+
+.fa-volume-low {
+    font-size: 1rem;
+    color: #a8a9ab;
+    margin-right: .5em;
+}
+
+/* Ajustes do botão de volume */
+input[type=range] {
+    appearance: none;
+    height: 5px;
+    width: 140px;
+    border-radius: .5rem;    
+    cursor: pointer;    
+    background: #0c0c0d;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(255, 255, 255, 0.1);
+
+    transition: .2s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    margin-top: -3px;
+    background: linear-gradient(to right, #3baa7b, #62bc68);
+    border: none;    
+    border-radius: 50%;
+
+    transition: all .2s ease-in-out;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 100%;
+    background: hsla(124, 40%, 56%, .6);
+    border-radius: 20px;
+    border: 0.2px solid #010101;
+  }
+
+  input[type=range]:active::-webkit-slider-thumb {
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px hsla(124, 40%, 56%, .2);
+  }
+
+  input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(to right, #3baa7b, #62bc68);
+    border: none;
+    border-radius: 50%;
+
+    transition: all .2s ease-in-out;
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    background: hsla(124, 40%, 56%, .6);    
+    border-radius: 20px;
+    border: 0.2px solid #010101;
+  }
+
+  input[type=range]:active::-moz-range-thumb {
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px hsla(124, 40%, 56%, .2);
+  }
+  
+  input[type=range]:focus {
+    outline: none; 
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;  
+    border-color: transparent;
+    background: transparent; 
+    color: transparent;
+  }  
+
 .song-time {
     width: 100%;
     height: .5rem;
@@ -153,11 +248,11 @@ html {
     position: relative; 
 }
 
-.song-progres {
+.song-progress {
     position:absolute;
     top: 0;
     left: 0;
-    width: 30%;
+    width: 0;
     height: 100%;
     background: linear-gradient(to right, #3baa7b, #62bc68);
     border-radius: .5rem;
@@ -180,6 +275,12 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.repeat-btn.active,
+.shuffle-btn.active {
+    background: linear-gradient(to right, #3baa7b, #62bc68);
+    color: #fff; 
 }
 
 .play-pause {

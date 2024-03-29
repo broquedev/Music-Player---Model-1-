@@ -27,7 +27,7 @@
 </head>
 <body>
     
-    <div class="container">
+    <div id="background" class="container">
         <div id="player" class="player">
             <div class="player-top">
                 <button class="player-btn">
@@ -41,8 +41,8 @@
             <div class="player-body">
                 <div class="current-song">
                     <div id="album_cover" class="cover">
-                        <span>Artista</span>
-                        <span>Música</span>
+                         <span><!-- artist --></span> 
+                        <span><!-- music --></span>
                     </div>
                 </div>
             </div>
@@ -53,19 +53,23 @@
                 </div>
                 <i class="fa-solid fa-heart"></i>
             </div>
+            <div id="volume" class="song_volume">
+                <i class="fa-solid fa-volume-low"></i>
+                <input type="range" min="1" max="100"> 
+            </div>
             <div class="song-duration">
-                <div class="song-time">
+                <div id="song_time" class="song-time">
                     <div id="song_progress" class="song-progress">
                         <audio id="data_audio" src="#" class="audio"></audio>
                     </div>
                 </div>
-                <div id="song_time" class="time">
+                <div id="music_time" class="time">
                     <span>00:00</span>
                     <span>00:00</span>
                 </div>
             </div>
-            <div class="controls">
-                <button class="player-btn">
+            <div id="controls_btn" class="controls">
+                <button id="random_btn" class="player-btn shuffle-btn">
                     <i class="fa-solid fa-shuffle"></i>
                 </button>
                 <button id="previous_btn" class="player-btn prev-btn">
@@ -77,7 +81,7 @@
                 <button id="next_btn" class="player-btn next-btn">
                     <i class="fa-solid fa-forward"></i>
                 </button>
-                <button class="player-btn">
+                <button id="repeat_btn" class="player-btn repeat-btn">
                     <i class="fa-solid fa-repeat"></i>
                 </button>
             </div>
